@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   end
 
   def hot
+    @post = Post.new
     @posts = Post.order(rank: :desc)
   end
 
@@ -20,6 +21,7 @@ class PostsController < ApplicationController
   end
 
   def newest
+    @post = Post.new
      @posts = Post.order('updated_at DESC')
   end
 

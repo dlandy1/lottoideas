@@ -1,8 +1,8 @@
 <% if @post.votes.where(address: request.remote_ip).empty? %>
   var number = +($('#'+<%=@post.id%>+"-vote").text());
-    $('#'+<%=@post.id%>+"-vote").html(number -1);
+    $('.'+<%=@post.id%>+"-vote").html(number -1);
     console.log
 <% else %>
   var number = +($('#'+<%=@post.id%>+"-vote").text());
-  $('#'+<%=@post.id%>+"-vote").html(number +1);
+  $('.'+<%=@post.id%>+"-vote").html(number +1);
 <% end %>

@@ -91,7 +91,9 @@ body{
 .share > a{
   color: #717171;
 }
-
+.navbar-nav > li > a {
+    line-height: 35px;
+}
 @media (max-width: 500px){
   .container{
     width: 100%;

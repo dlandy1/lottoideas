@@ -1,19 +1,19 @@
 class PostsController < ApplicationController
   def index
     @post = Post.new
-    @posts = Post.order('votes_count DESC')
+    @posts = Post.order('votes_count DESC').page(params[:page]).per(20)
 
     @vote = Vote.new
   end
 
   def show
     @post = Post.find(params[:id])
-    @posts = Post.order('votes_count DESC')
+    @posts = Post.order('votes_count DESC').page(params[:page]).per(20)
   end
 
   def hot
     @post = Post.new
-    @posts = Post.order(rank: :desc)
+    @posts = Post.order(rank: :desc).page(params[:page]).per(20)
   end
 
   def new

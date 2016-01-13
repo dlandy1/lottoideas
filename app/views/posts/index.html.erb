@@ -4,6 +4,7 @@
   <% @posts.each do |p| %>
     <%= render partial: 'list', locals: { p: p} %>
   <% end %>
+  <%= paginate @posts %>
 </div>
 
 

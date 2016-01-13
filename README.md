@@ -1,0 +1,1 @@
+## LottoIdeas: a Reddit replica for figuring out the best things to do with the 1.3 Billion.

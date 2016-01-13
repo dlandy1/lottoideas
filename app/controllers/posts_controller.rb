@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 
   def newest
     @post = Post.new
-     @posts = Post.order('updated_at DESC')
+     @posts = Post.order('updated_at DESC').page(params[:page]).per(20)
   end
 
   def create

@@ -1,0 +1,16 @@
+<div class="poster">
+      <div class="inline vote">
+        <%= link_to post_vote_path(p), remote: :true, method: :post do %>
+        <%= fa_icon("caret-up") %></br>
+         <span id="<%=p.id%>-vote" > <%= p.votes.count %> </span>
+        <% end %> 
+      </div>
+      <div class="body">
+      <%= simple_format(p.body) %>
+      </div>
+      <div class="share">
+        <%= link_to post_path(p) do %>
+          <%= fa_icon("external-link") %> Share
+        <% end %>
+      </div>
+    </div>

@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+
+  resources :posts do
+       post '/vote' => 'votes#vote', as: :vote
+
+  end
+
+  get '/hot' => 'posts#hot', as: :hot
+
+  get '/newest' => 'posts#newest', as: :newest
+
+  root to: 'posts#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,9 @@
+<h2 class="text-center">Top Ideas</h2>
+<%= render partial: 'form', locals: { post: @post} %>
+ <div class="encompeser">
+  <% @posts.each do |p| %>
+    <%= render partial: 'list', locals: { p: p} %>
+  <% end %>
+</div>
+
+

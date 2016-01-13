@@ -1,0 +1,19 @@
+<%= form_for [ post ] do |f| %> 
+  <% if post.errors.any? %>
+      <div class="edit alert-danger">
+        <h4>There are <%= pluralize(post.errors.count, "error") %></h4>
+        <ol>
+          <% post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ol>
+      </div>
+     <% end %>
+    <div class="form-group" style="margin: 0;">
+      <%= f.text_area :body, rows: 3, class: 'form-control', id: 'textarea', maxlength: "500",  placeholder: "If you won the lottery, how would you spend the money?"%>
+    </div>
+    <div class="holder">
+       <div id="textarea_feedback"></div>
+        <%= f.submit "Save", class: 'btn btn-success'%>
+    </div>
+<% end %>

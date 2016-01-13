@@ -1,0 +1,7 @@
+<h2 class="text-center">Newest Posts</h2>
+<%= render partial: 'form', locals: { post: @post} %>
+ <div class="encompeser">
+  <% @posts.each do |p| %>
+    <%= render partial: 'list', locals: { p: p} %>
+  <% end %>
+</div>

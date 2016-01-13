@@ -2,7 +2,7 @@
       <div class="inline vote">
         <%= link_to post_vote_path(p), remote: :true, method: :post do %>
         <%= fa_icon("caret-up") %></br>
-         <span class="<%=p.id%>-vote" > <%= p.votes.count %> </span>
+         <span id="<%=p.id%>-vote" class="<%=p.id%>-vote" > <%= p.votes.count %> </span>
         <% end %> 
       </div>
       <div class="body">
